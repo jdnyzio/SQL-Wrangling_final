@@ -25,6 +25,7 @@ CREATE TABLE [ways_nodes]
     [node_id] INTEGER,
     [position] INTEGER,
     FOREIGN KEY ([id]) REFERENCES [way] ([id]) 
+    FOREIGN KEY ([node_id]) REFERENCES [node] ([id]) 
 );
 
 
@@ -69,3 +70,7 @@ JOIN ways_nodes ON way.id = ways_nodes.id;
 
 SELECT * FROM nodes
 JOIN nodes_tags ON nodes.id = nodes_tags.id;
+
+SELECT * FROM ways_nodes 
+JOIN way ON way.id = ways_nodes.id 
+JOIN nodes ON ways_nodes.node_id = nodes.id
