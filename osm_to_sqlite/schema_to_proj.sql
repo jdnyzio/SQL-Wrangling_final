@@ -30,15 +30,6 @@ CREATE TABLE [ways_nodes]
 
 ###########    NODES   #############
 
-CREATE TABLE [nodes_tags]
-(
-    [id] INTEGER, 
-    [type] TEXT,
-    [key] TEXT,
-    [value] TEXT,
-    FOREIGN KEY ([id]) REFERENCES [nodes] ([id]) 
-);
-
 CREATE TABLE [nodes]
 (
     [id] INTEGER PRIMARY KEY, 
@@ -51,6 +42,14 @@ CREATE TABLE [nodes]
     [uid] INTEGER
 );
 
+CREATE TABLE [nodes_tags]
+(
+    [id] INTEGER, 
+    [type] TEXT,
+    [key] TEXT,
+    [value] TEXT,
+    FOREIGN KEY ([id]) REFERENCES [nodes] ([id]) 
+);
 
 ####### IMPORTS #######
 
