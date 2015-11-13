@@ -17,7 +17,6 @@ CREATE TABLE [nodes]
     [timestamp] STRING,
     [user] STRING,
     [uid] INTEGER,
-    FOREIGN KEY ([uid]) REFERENCES [way] ([uid]) 
 );
 
 
@@ -48,7 +47,6 @@ CREATE TABLE [way]
     [timestamp] TEXT,
     [user] TEXT,
     [uid] INTEGER,
-    FOREIGN KEY ([uid]) REFERENCES [nodes] ([uid]) 
 );
 
 
