@@ -38,8 +38,8 @@ CREATE TABLE [nodes]
     [long] REAL,
     [version] TEXT,
     [changeset] INTEGER,
-    [timestamp] STRING,
-    [user] STRING,
+    [timestamp] TEXT,
+    [user] TEXT,
     [uid] INTEGER
 );
 
